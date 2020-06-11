@@ -1,6 +1,7 @@
 package com.github.bookingSystem.bookingSystem.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
 
@@ -21,6 +22,9 @@ public class Booking {
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
 
