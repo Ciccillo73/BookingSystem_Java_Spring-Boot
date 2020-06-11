@@ -70,4 +70,12 @@ public class Customer {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }

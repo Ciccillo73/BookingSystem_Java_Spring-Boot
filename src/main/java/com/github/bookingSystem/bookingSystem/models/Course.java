@@ -71,4 +71,12 @@ public class Course {
     public void setTown(String town) {
         this.town = town;
     }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }

@@ -1,7 +1,7 @@
 package com.github.bookingSystem.bookingSystem.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.hibernate.annotations.ManyToAny;
+
 
 import javax.persistence.*;
 
