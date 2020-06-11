@@ -1,6 +1,8 @@
 package com.github.bookingSystem.bookingSystem.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "customers")
@@ -20,11 +22,14 @@ public class Customer {
     @Column
     private int age;
 
+    private List<Booking> bookings;
+
 
     public Customer(String name, String town, int age) {
         this.name = name;
         this.town = town;
         this.age = age;
+        this.bookings = new ArrayList<Booking>();
     }
 
     public Customer() {
