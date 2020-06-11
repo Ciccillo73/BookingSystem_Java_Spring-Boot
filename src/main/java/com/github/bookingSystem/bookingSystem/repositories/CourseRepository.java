@@ -10,8 +10,7 @@ import java.util.List;
 public interface CourseRepository extends JpaRepository <Course, Long>{
 
     List<Course> findByStarRating(int rating);
-
-
+    List<Course> findByBookingsCustomerId(Long id);
 
 
 }
