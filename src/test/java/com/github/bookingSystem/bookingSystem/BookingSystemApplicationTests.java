@@ -10,6 +10,7 @@ import com.sun.java.accessibility.util.EventID;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 
 import java.util.List;
 
@@ -64,6 +65,12 @@ class BookingSystemApplicationTests {
 			assertEquals(2, foundCustomer.size());
 
 
+	}
+
+	@Test
+	public void canFindCustomerTownByCourseNameAndAgeGreaterThan(){
+		List<Customer> foundCustomer = customerRepository.findByTownAndBookingsCourseNameAndAgeGreaterThan("London", "Javascript", 41);
+		assertEquals(1, foundCustomer.size());
 	}
 
 }
