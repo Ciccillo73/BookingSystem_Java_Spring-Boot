@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface CustomerRepository extends JpaRepository <Customer, Long> {
 
-    List<Customer> findByBookingCourseName(String courseName);
+    List<Customer> findByBookingsCourseName(String name);
 
 }
