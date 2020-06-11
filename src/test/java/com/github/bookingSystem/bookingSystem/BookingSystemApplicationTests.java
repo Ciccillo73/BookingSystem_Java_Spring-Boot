@@ -4,6 +4,7 @@ import com.github.bookingSystem.bookingSystem.models.Course;
 import com.github.bookingSystem.bookingSystem.models.Customer;
 import com.github.bookingSystem.bookingSystem.repositories.CourseRepository;
 import com.github.bookingSystem.bookingSystem.repositories.CustomerRepository;
+import com.sun.java.accessibility.util.EventID;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,6 +37,13 @@ class BookingSystemApplicationTests {
 	public void canFindCustomerByCourseName(){
 		List<Customer> foundCustomer = customerRepository.findByBookingsCourseName("Java");
 		assertEquals(2, foundCustomer.size());
+
+	}
+
+	@Test
+	public void	canFindCourseByCustomerId(){
+		List<Course> foundCourse = courseRepository.findByBookingsCustomerId(1L);
+			assertEquals(4, foundCourse.size());
 
 	}
 
