@@ -20,4 +20,13 @@ public class Course {
     @Column
     private String town;
 
+    public Course(String name, int starRating, String town) {
+        this.name = name;
+        this.starRating = starRating;
+        this.town = town;
+
+    }
+
+    public Course() {
+    }
 }
