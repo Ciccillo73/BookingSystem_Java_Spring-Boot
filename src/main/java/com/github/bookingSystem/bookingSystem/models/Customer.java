@@ -21,4 +21,14 @@ public class Customer {
     private int age;
 
 
+    public Customer(String name, String town, int age) {
+        this.name = name;
+        this.town = town;
+        this.age = age;
+    }
+
+    public Customer() {
+    }
+
+
 }
