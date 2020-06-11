@@ -1,5 +1,7 @@
 package com.github.bookingSystem.bookingSystem.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,9 @@ public class Course {
 
     @Column
     private String town;
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "course")
 
     private List<Booking> bookings;
 
